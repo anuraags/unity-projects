@@ -6,15 +6,13 @@ using UnityEngine;
 public class ShapeSettings : ScriptableObject
 {
     public float planetRadius = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public NoiseLayer[] noiseLayers;
 
-    // Update is called once per frame
-    void Update()
+    [System.Serializable]
+    public class NoiseLayer
     {
-        
+        public bool enabled = true;
+        public bool useFirstLayerAsMask;
+        public NoiseSettings noiseSettings;
     }
 }
